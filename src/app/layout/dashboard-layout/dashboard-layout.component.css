@@ -1,0 +1,26 @@
+.breadcrumb {
+    background-color: #0e7eef;
+    height: 42px;
+}
+
+.breadcrumb-item a {
+    color: #fff;
+}
+
+.breadcrumb-item.active {
+    color: #fff;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: #fff;
+}
+
+.navbar-brand-full {
+    height: 56px !important;
+    width: 159px !important;
+}
+
+#bodycontent {
+    height: calc(100vh - 135px);
+    overflow: auto;
+}
