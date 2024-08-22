@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <div class="heading-box mb-4">
+        <h1 class="mb-0">Blogs</h1>
+        <button (click)="addNewBlog()" class="btn btn-primary add-blog-button">Add Blog</button>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let item of blogs; let i = index" [ngClass]="getColClasses()" class="col-md-6">
+            <div class="card mb-4 position-relative">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <div class="box">
+                            <img [src]="item.image" alt="Image description" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h2>{{ item.title }}</h2>
+                        <p>{{ item.description }}</p>
+                    </div>
+                </div>
+                <div class="delete-button-wrapper">
+                    <button (click)="deleteBlog(item.id)" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
